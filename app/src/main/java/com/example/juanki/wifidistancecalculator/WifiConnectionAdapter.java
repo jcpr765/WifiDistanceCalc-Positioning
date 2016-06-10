@@ -33,7 +33,7 @@ public class WifiConnectionAdapter extends ArrayAdapter<WifiConnection>{
 
         TextView Wifi_Distance = (TextView) convertView.findViewById(R.id.Wifi_Distance);
 
-        TextView Wifi_RTT = (TextView) convertView.findViewById(R.id.Wifi_RTT);
+        TextView Wifi_MAC = (TextView) convertView.findViewById(R.id.Wifi_MAC);
 
         Wifi_SSID.setText("SSID: " + connection.SSID);
 
@@ -41,7 +41,7 @@ public class WifiConnectionAdapter extends ArrayAdapter<WifiConnection>{
 
         Wifi_Distance.setText("Distance (FSPL): " + String.valueOf(connection.distance));
 
-        Wifi_RTT.setText("RTT: " + String.valueOf(connection.roundTripTime));
+        Wifi_MAC.setText("MAC: " + String.valueOf(connection.MAC));
 
         return convertView;
     }

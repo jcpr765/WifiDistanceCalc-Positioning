@@ -23,5 +23,58 @@
         android:layout_height="wrap_content"
         android:id="@+id/listView"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView" />
+        android:layout_below="@+id/textView"
+        android:paddingBottom="50dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCAN"
+        android:id="@+id/Wifi_Scan"
+        android:onClick="scanBegin"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/posLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/position_input"
+        android:width="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/posLabel"
+        android:text="Position: "
+        android:layout_alignTop="@+id/position_input"
+        android:layout_toStartOf="@+id/position_input"
+        android:textSize="15dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:id="@+id/unitLabel"
+        android:layout_alignBaseline="@+id/posLabel"
+        android:layout_alignBottom="@+id/posLabel"
+        android:layout_toEndOf="@+id/position_input" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CSV"
+        android:id="@+id/saveData"
+        android:onClick="exportCSV"
+        android:layout_alignTop="@+id/Wifi_Scan"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/Wifi_Scan" />
+
 </RelativeLayout>

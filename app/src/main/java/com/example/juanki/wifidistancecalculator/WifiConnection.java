@@ -9,31 +9,32 @@ public class WifiConnection {
 
     public String SSID;
     public int rssi;
-    public String distance;
-    public long roundTripTime;
+    public double distance;
+    public String MAC;
 
-    public String getDistance() {
+    public double getDistance() {
         return distance;
     }
 
-    public void setDistance(String distance) {
+    public void setDistance(double distance){
         this.distance = distance;
     }
 
-    public long getRoundTripTime() {
-        return roundTripTime;
-    }
 
-    public void setRoundTripTime(long roundTripTime) {
-        this.roundTripTime = roundTripTime;
-    }
-
-    public WifiConnection(String SSID, int rssi, String distance, long roundTripTime){
+    public WifiConnection(String SSID, int rssi, double distance, String MAC){
         this.SSID = SSID;
         this.rssi = rssi;
         this.distance = distance;
-        this.roundTripTime = roundTripTime;
+        this.MAC = MAC;
 
+    }
+
+    public String getMAC() {
+        return MAC;
+    }
+
+    public void setMAC(String MAC) {
+        this.MAC = MAC;
     }
 
     public int getRssi() {

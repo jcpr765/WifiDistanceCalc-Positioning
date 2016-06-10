@@ -9,8 +9,8 @@ public class WifiComparator implements Comparator<WifiConnection> {
 
     @Override
     public  int compare(WifiConnection a, WifiConnection b){
-        double ad = Double.parseDouble(a.distance);
-        double bd = Double.parseDouble(b.distance);
+        double ad = a.distance;
+        double bd = b.distance;
 
         if(ad > bd)
             return 1;
